@@ -1,7 +1,7 @@
 import { observable, autorun, action, computed } from 'mobx';
 
 class AuthStore {
-  @observable openLogin = false;
+  @observable closeForm = false;
   @observable username = null;
 
   constructor() {
@@ -10,7 +10,8 @@ class AuthStore {
 
   @action
   toggleForm = set => {
-    this.openLogin = set;
+    // console.log(value);
+    this.closeForm = set;
   };
 
   @action
